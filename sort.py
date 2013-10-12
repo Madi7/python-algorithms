@@ -11,6 +11,11 @@ def bubble_sort(array):
 
     The largest bubbles it's way up to the end of the array.
     This is why the call it bubble sort.
+
+    Method: Exchange (swap) sort
+    Best case: O(n)
+    Average case: O(n2)
+    Worst case: O(n2)
     """
     sorted = False
     length = len(array)-1
@@ -37,6 +42,13 @@ def insertion_sort(array):
     Next we add another item and compare it to the left, if the new item
     is larger to it's left item then we swap.  We continue this until we've reached
     the end.
+
+    22--2--
+
+    Method: Insertion sort
+    Best case: O(n)
+    Average case: O(n^2)
+    Worst case: O(n^2)
     """
     iterations = 0
     for i in range(len(array)):
@@ -93,6 +105,11 @@ def merge_sort(array):
 
     The main purpose of this function is to break up
     the arrays into 1-item arrays.
+
+    Method: Merge sort
+    Best case: O(n log n)
+    Average case: O(n log n)
+    Worst case: O(n log n)
     """
     # print 'array', array
 
@@ -109,6 +126,12 @@ def merge_sort(array):
 
 
 def quick_sort(array, first, last):
+    """
+    Type: Exchange (swap) sort
+    Best case: O(n log n)
+    Average case: O(n log n)
+    Worst case: O(n^2)
+    """
     if first < last:
         split_index = partition(array, first, last)
         quick_sort(array, first, split_index-1)
@@ -148,6 +171,11 @@ def selection_sort(array):
     Continue traversing the entire unsorted array and swaping
     the next smal value with the first unsorted value until you're
     at the second to last item.  It is assumed that the last item is sorted.
+
+    Type: Selection sort
+    Best case: O(n^2)
+    Average case: O(n^2)
+    Worst case: O(n^2)
     """
 
     # for i in range(len(array)):
@@ -167,7 +195,12 @@ def selection_sort(array):
 
 
 def HeapSort(A, T):
-
+    """
+    Type: Selection sort
+    Best case: O(n log n)
+    Average case: O(n log n)
+    Worst case: O(n log n)
+    """
     def heapify(A):
         start = (len(A) - 2) / 2
         while start >= 0:
