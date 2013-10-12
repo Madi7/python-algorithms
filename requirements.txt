@@ -1,0 +1,5 @@
+bintrees==2.0.0
+distribute==0.6.27
+ipython==1.1.0
+readline==6.2.4.1
+wsgiref==0.1.2
