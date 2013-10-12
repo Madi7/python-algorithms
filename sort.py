@@ -228,6 +228,26 @@ def HeapSort(A, T):
         end -= 1
 
 
+def is_heap(array):
+    """
+    Checks if array is in heap order.
+    The heap property is that each node should be greater
+    than or equal to its parent. The parent of element i
+    in a binary heap stored in an array is element (i-1)/2
+    source: http://stackoverflow.com/questions/16414671/determining-if-a-list-of-numbers-is-in-heap-order-python-3-2
+    """
+    needs = []
+    # example array: [0, 1, 10, 2, 3, 11, 12, 4, 5, 19, 15]
+    # code skips the zero index; that's the root index, it has no parent
+    for i in range(1, len(array)):
+        # print '%s(%s) %s(%s)' % (array[i], i, array[(i-1)/2], (i-1)/2)
+        needs.append(array[i] >=array[(i-1)//2])
+
+    return all(needs)
+
+
+
+
 if __name__ == '__main__':
     """
     Calls sorting algorithms and prints return values
